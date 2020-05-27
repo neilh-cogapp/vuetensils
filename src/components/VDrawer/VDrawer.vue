@@ -28,6 +28,10 @@ export default {
      */
     right: Boolean,
     /**
+     * Flag to place the drawer at the top.
+     */
+    top: Boolean,
+    /**
      * CSS width value.
      */
     width: {
@@ -197,7 +201,7 @@ export default {
           ref: "content",
           class: [
             `${NAME}__content`,
-            { "vts-drawer__content--right": !!this.right },
+            { "vts-drawer__content--right": !!this.right, "vts-drawer__content--top": !!this.top, },
             classes.content,
           ],
           style: {
